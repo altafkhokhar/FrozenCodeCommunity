@@ -1,0 +1,10 @@
+D:\Altaf\FrozenCode\FrozenCode.Community\FrozenCode.Community.Contract\obj\Debug\FrozenCode.Community.Contract.csprojAssemblyReference.cache
+D:\Altaf\FrozenCode\FrozenCode.Community\FrozenCode.Community.Contract\bin\Debug\FrozenCode.Community.Contract.dll
+D:\Altaf\FrozenCode\FrozenCode.Community\FrozenCode.Community.Contract\bin\Debug\FrozenCode.Community.Contract.pdb
+D:\Altaf\FrozenCode\FrozenCode.Community\FrozenCode.Community.Contract\bin\Debug\FrozenCode.Community.DTO.dll
+D:\Altaf\FrozenCode\FrozenCode.Community\FrozenCode.Community.Contract\bin\Debug\FrozenCode.Community.DTO.pdb
+D:\Altaf\FrozenCode\FrozenCode.Community\FrozenCode.Community.Contract\obj\Debug\FrozenCode.Community.Contract.csproj.CopyComplete
+D:\Altaf\FrozenCode\FrozenCode.Community\FrozenCode.Community.Contract\obj\Debug\FrozenCode.Community.Contract.dll
+D:\Altaf\FrozenCode\FrozenCode.Community\FrozenCode.Community.Contract\obj\Debug\FrozenCode.Community.Contract.pdb
+D:\Altaf\FrozenCode\FrozenCode.Community\AppUI\bin\Debug\FrozenCode.Community.Contract.dll
+D:\Altaf\FrozenCode\FrozenCode.Community\AppUI\bin\Debug\FrozenCode.Community.Contract.pdb

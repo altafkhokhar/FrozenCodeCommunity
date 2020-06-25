@@ -1,0 +1,6 @@
+D:\Altaf\FrozenCode\FrozenCode.Community\FrozenCode.Community.DTO\bin\Debug\FrozenCode.Community.DTO.dll
+D:\Altaf\FrozenCode\FrozenCode.Community\FrozenCode.Community.DTO\bin\Debug\FrozenCode.Community.DTO.pdb
+D:\Altaf\FrozenCode\FrozenCode.Community\FrozenCode.Community.DTO\obj\Debug\FrozenCode.Community.DTO.dll
+D:\Altaf\FrozenCode\FrozenCode.Community\FrozenCode.Community.DTO\obj\Debug\FrozenCode.Community.DTO.pdb
+D:\Altaf\FrozenCode\FrozenCode.Community\AppUI\bin\Debug\FrozenCode.Community.DTO.dll
+D:\Altaf\FrozenCode\FrozenCode.Community\AppUI\bin\Debug\FrozenCode.Community.DTO.pdb
