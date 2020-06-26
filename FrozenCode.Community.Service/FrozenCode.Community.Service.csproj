@@ -35,7 +35,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\AppUI\bin\Debug\</OutputPath>
+    <OutputPath>..\AppUI\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -55,11 +55,13 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="FrozenCode.Community.Contract">
-      <HintPath>..\AppUI\bin\Debug\FrozenCode.Community.Contract.dll</HintPath>
+    <Reference Include="FrozenCode.Community.Contract, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AppUI\bin\FrozenCode.Community.Contract.dll</HintPath>
     </Reference>
-    <Reference Include="FrozenCode.Community.DTO">
-      <HintPath>..\AppUI\bin\Debug\FrozenCode.Community.DTO.dll</HintPath>
+    <Reference Include="FrozenCode.Community.DTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AppUI\bin\FrozenCode.Community.DTO.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -108,9 +110,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Community.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="CommunityModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CommunityModel.edmx</DependentUpon>
@@ -120,10 +119,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>CommunityModel.edmx</DependentUpon>
       <LastGenOutput>CommunityModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="Community_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Community.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>

@@ -48,27 +48,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework">
+      <HintPath>bin\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>bin\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="FrozenCode.Community.Contract, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\FrozenCode.Community.Contract.dll</HintPath>
+    <Reference Include="FrozenCode.Community.Contract">
+      <HintPath>bin\FrozenCode.Community.Contract.dll</HintPath>
     </Reference>
-    <Reference Include="FrozenCode.Community.DTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\FrozenCode.Community.DTO.dll</HintPath>
+    <Reference Include="FrozenCode.Community.DTO">
+      <HintPath>bin\FrozenCode.Community.DTO.dll</HintPath>
     </Reference>
-    <Reference Include="FrozenCode.Community.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\FrozenCode.Community.Service.dll</HintPath>
+    <Reference Include="FrozenCode.Community.Service">
+      <HintPath>bin\FrozenCode.Community.Service.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
@@ -79,6 +75,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Helper\Helper.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -92,6 +91,12 @@
     <Compile Include="MemberEntry.Designer.cs">
       <DependentUpon>MemberEntry.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberList.Designer.cs">
+      <DependentUpon>MemberList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main.resx">
@@ -99,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MemberEntry.resx">
       <DependentUpon>MemberEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberList.resx">
+      <DependentUpon>MemberList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -142,6 +150,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
