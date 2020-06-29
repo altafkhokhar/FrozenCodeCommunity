@@ -80,7 +80,7 @@ namespace FrozenCode.Community.AppUI
 
                 var memberImageName = AppHelper.GetMemberImageFullPathToSave() + memberDto.MemberId + "_" + memberDto.FullName + AppHelper.GetMemberImageExtensionForSave();
                 pbMember.Image.Save(memberImageName, ImageFormat.Jpeg);
-                memberDto.ImageLocation = memberImageName;
+                memberDto.ImageLocation = memberDto.MemberId + "_" + memberDto.FullName + AppHelper.GetMemberImageExtensionForSave();
             }
             return memberDto;
         }

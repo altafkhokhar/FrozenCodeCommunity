@@ -1,5 +1,6 @@
 ﻿using FrozenCode.Community.DTO;
 using System;
+using System.Collections.Generic;
 
 namespace FrozenCode.Community.Contract
 {
@@ -7,5 +8,8 @@ namespace FrozenCode.Community.Contract
     {
 
         bool TrySaveMember(ref MemberDTO memberDto);
+
+        IEnumerable<MemberSearchDTO> GetAll();
+        IEnumerable<MemberSearchDTO> SearchMembers(string searchString);
     }
 }

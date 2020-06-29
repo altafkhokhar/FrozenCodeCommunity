@@ -35,7 +35,7 @@ namespace FrozenCode.Community.Service
                 else
                     communityMember.ImageLocation = memberDto.ImageLocation;
 
-                memberDto.GrandFatherName = string.Empty;
+                communityMember.GrandFatherName = string.Empty;
                
                 communityMember.MarriageDate = memberDto.MarriageDate;
                 communityMember.CreatedDate = DateTime.Now;
