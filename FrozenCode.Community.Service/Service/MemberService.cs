@@ -10,12 +10,18 @@ namespace FrozenCode.Community.Service
 {
     public class MemberService : IMemberService
     {
-        public bool TrySaveMember(ref MemberDTO memberDto)
+        CommunityEntities context = new CommunityEntities();
+        public bool TrySaveMember(ref MemberDTO memberDto, out string message)
         {
+            message = string.Empty;
             try
             {
+                //ValidateNewMember(memberDto);
+                if (!ValidateNewMember(memberDto, out message))
+                {
+                    return false;
 
-                CommunityEntities context = new CommunityEntities();
+                }
 
                 Member communityMember = new Member();
 
@@ -52,6 +58,22 @@ namespace FrozenCode.Community.Service
             }
 
             return true;
+        }
+
+        private bool ValidateNewMember(MemberDTO memberDto, out string message)
+        {
+            //message
+            var existingMember = context.Members.Where(wh => wh.MemberID == memberDto.MemberId).FirstOrDefault();
+            if (existingMember != null)
+            {
+                message = "MEMBERID ALREADY EXIST!";
+                return false;
+            }
+            else
+            {
+                message = string.Empty;
+                return true;
+            }
         }
 
         public IEnumerable<MemberSearchDTO> GetAll()

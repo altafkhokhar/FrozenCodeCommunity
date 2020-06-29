@@ -22,6 +22,7 @@ namespace FrozenCode.Community.AppUI.Helper
 
         private static string KEY_IMAGELOCATION = "IMAGELOCATION";
         private static string KEY_ISDEVELOPMENT = "ISDEVELOPMENT";
+        private static string DEFAULT_PROFILE_PIC = "DEFAULT_PROFILE_PIC";
 
         public static string GetMemberImageFullPathToSave()
         {
@@ -40,5 +41,7 @@ namespace FrozenCode.Community.AppUI.Helper
 
             return ImageFileExtension;
         }
+
+        
     }
 }

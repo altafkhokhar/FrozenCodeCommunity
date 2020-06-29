@@ -25,7 +25,21 @@ namespace FrozenCode.Community.AppUI
         private void btnSave_Click(object sender, EventArgs e)
         {
             var memberDto = GetMemberUIData();
-            memberSrevice.TrySaveMember(ref memberDto);
+
+            string message = string.Empty;
+            if (memberSrevice.TrySaveMember(ref memberDto, out message))
+            {
+                message = "Record Saved Successfully!";
+                DisplayMessage.ShowSuccessMessage(message, DisplayMessage.SAVE_TITLE);
+                //this.btnClear.Click();
+                ClearMemberEntryData();
+            }
+            else
+            {
+                if(string.IsNullOrWhiteSpace( message))
+                    message = "There is Error while saving the record, Record not saved!";
+                DisplayMessage.ShowErrorMessage(message, DisplayMessage.ERROR_TITLE);
+            }
         }
 
         private void btnPicture_Click(object sender, EventArgs e)
@@ -52,7 +66,7 @@ namespace FrozenCode.Community.AppUI
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            this.txtFullName.Text = string.Empty;
+            ClearMemberEntryData();
         }
 
         #region PRVATE METHODS
@@ -85,11 +99,29 @@ namespace FrozenCode.Community.AppUI
             return memberDto;
         }
 
-        #endregion
 
+        private void ClearMemberEntryData()
+        {
+
+            this.maskedTextBoxMemberId.Text = string.Empty;
+            this.txtFullName.Text = string.Empty;
+            this.txtFatherName.Text = string.Empty;
+            this.txtAddress.Text = string.Empty;
+            this.maskedTextBoxMemberId.Text = string.Empty;
+            this.maskedTextBoxmobilenumber.Text = string.Empty;
+            this.dtDOB.Value = DateTime.Now.AddYears(-20);
+            this.dtMaarriage.Value = DateTime.Now.AddYears(-10);
+            this.txtQualification.Text = string.Empty;
+            //this.pbMember.Image. = DEFAULT_PROFILE_PIC;
+
+        }
+        #endregion
+        
         private void MemberEntry_FormClosing(object sender, FormClosingEventArgs e)
         {
 
         }
+
+        
     }
 }

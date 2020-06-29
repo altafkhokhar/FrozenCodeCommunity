@@ -59,6 +59,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.maskedTextBoxmobilenumber);
             this.panel1.Controls.Add(this.maskedTextBoxMemberId);
@@ -80,33 +81,36 @@
             this.panel1.Controls.Add(this.txtFatherName);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtFullName);
-            this.panel1.Location = new System.Drawing.Point(67, 62);
+            this.panel1.Location = new System.Drawing.Point(115, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(736, 555);
-            this.panel1.TabIndex = 17;
+            this.panel1.Size = new System.Drawing.Size(729, 505);
+            this.panel1.TabIndex = 9;
             // 
             // btnClose
             // 
+            this.btnClose.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(458, 503);
+            this.btnClose.Location = new System.Drawing.Point(455, 439);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(89, 37);
             this.btnClose.TabIndex = 12;
             this.btnClose.Text = "CLOSE";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // maskedTextBoxmobilenumber
             // 
+            this.maskedTextBoxmobilenumber.BackColor = System.Drawing.Color.Gainsboro;
             this.maskedTextBoxmobilenumber.Location = new System.Drawing.Point(153, 216);
             this.maskedTextBoxmobilenumber.Mask = "0000000000";
             this.maskedTextBoxmobilenumber.Name = "maskedTextBoxmobilenumber";
             this.maskedTextBoxmobilenumber.Size = new System.Drawing.Size(93, 20);
             this.maskedTextBoxmobilenumber.TabIndex = 5;
-            this.maskedTextBoxmobilenumber.Text = "9";
+            this.maskedTextBoxmobilenumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // maskedTextBoxMemberId
             // 
+            this.maskedTextBoxMemberId.BackColor = System.Drawing.Color.Gainsboro;
             this.maskedTextBoxMemberId.Location = new System.Drawing.Point(153, 20);
             this.maskedTextBoxMemberId.Mask = "00000";
             this.maskedTextBoxMemberId.Name = "maskedTextBoxMemberId";
@@ -116,7 +120,7 @@
             // 
             // pbMember
             // 
-            this.pbMember.Location = new System.Drawing.Point(535, 18);
+            this.pbMember.Location = new System.Drawing.Point(535, 24);
             this.pbMember.Name = "pbMember";
             this.pbMember.Size = new System.Drawing.Size(141, 169);
             this.pbMember.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,35 +129,40 @@
             // 
             // btnPicture
             // 
-            this.btnPicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPicture.Location = new System.Drawing.Point(535, 193);
+            this.btnPicture.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnPicture.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPicture.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPicture.Location = new System.Drawing.Point(535, 216);
             this.btnPicture.Name = "btnPicture";
-            this.btnPicture.Size = new System.Drawing.Size(51, 31);
+            this.btnPicture.Size = new System.Drawing.Size(86, 31);
             this.btnPicture.TabIndex = 9;
-            this.btnPicture.Text = "ફોટો";
-            this.btnPicture.UseVisualStyleBackColor = true;
+            this.btnPicture.Text = "BROWESE";
+            this.btnPicture.UseMnemonic = false;
+            this.btnPicture.UseVisualStyleBackColor = false;
             this.btnPicture.Click += new System.EventHandler(this.btnPicture_Click);
             // 
             // btnClear
             // 
+            this.btnClear.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(356, 503);
+            this.btnClear.Location = new System.Drawing.Point(242, 439);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(89, 37);
             this.btnClear.TabIndex = 11;
             this.btnClear.Text = "CLEAR";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(256, 503);
+            this.btnSave.Location = new System.Drawing.Point(59, 439);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(82, 37);
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "SAVE";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label8
@@ -178,6 +187,7 @@
             // 
             // txtQualification
             // 
+            this.txtQualification.BackColor = System.Drawing.Color.Gainsboro;
             this.txtQualification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQualification.Location = new System.Drawing.Point(153, 365);
             this.txtQualification.Name = "txtQualification";
@@ -206,6 +216,8 @@
             // 
             // dtDOB
             // 
+            this.dtDOB.CalendarMonthBackground = System.Drawing.Color.Gainsboro;
+            this.dtDOB.CalendarTitleBackColor = System.Drawing.Color.Gainsboro;
             this.dtDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDOB.Location = new System.Drawing.Point(153, 266);
             this.dtDOB.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
@@ -246,6 +258,7 @@
             // 
             // txtAddress
             // 
+            this.txtAddress.BackColor = System.Drawing.Color.Gainsboro;
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(153, 167);
             this.txtAddress.Name = "txtAddress";
@@ -264,6 +277,7 @@
             // 
             // txtFatherName
             // 
+            this.txtFatherName.BackColor = System.Drawing.Color.Gainsboro;
             this.txtFatherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFatherName.Location = new System.Drawing.Point(153, 117);
             this.txtFatherName.Name = "txtFatherName";
@@ -282,6 +296,7 @@
             // 
             // txtFullName
             // 
+            this.txtFullName.BackColor = System.Drawing.Color.Gainsboro;
             this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.Location = new System.Drawing.Point(153, 65);
             this.txtFullName.Name = "txtFullName";
@@ -290,26 +305,28 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.lblTitle);
-            this.panel2.Location = new System.Drawing.Point(67, 2);
+            this.panel2.Location = new System.Drawing.Point(115, 24);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(495, 54);
+            this.panel2.Size = new System.Drawing.Size(445, 54);
             this.panel2.TabIndex = 18;
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(14, 13);
+            this.lblTitle.Location = new System.Drawing.Point(3, 7);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(151, 31);
+            this.lblTitle.Size = new System.Drawing.Size(229, 31);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Community";
+            this.lblTitle.Text = "Community Form.";
             // 
             // MemberEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(957, 629);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
