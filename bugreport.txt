@@ -1,0 +1,34 @@
+(1) an error
+1.I just clicked loadall button multipel times
+2.And then clicked search button and the 'error' comes.
+
+step :-
+        :- Go to search button and enter name (ex :- Noman)
+        :- after entring a name the damn error comes.
+
+(2) Notification
+
+1. A user have to get notification about submiting his/her form
+2. just like an alert msg that shows "saved".
+3. And also the form must be cleared when "saved"
+
+(3) Same Id to user
+
+1. You have to do somthing like A perticular user has his/her diffrent id.
+2. we need to do that if each id has been used so other user can not entered
+with that "id"
+3. A mobile number was also conflicting, a user can not entre same mobile number
+
+
+
+
+
+
+THE COLOR COMBINATIONS
+
+(1) FORM BACKGROUND COLOR :- DarkGray.
+(2) PANEL1 COLOR          :- Silver.
+(3) dgMembers COLOR       :- DarkGray.
+(4) Taxtbox COLOR         :- Gainsboro.
+(5) BUTTON COLOR          :- AppWorkspace
+
