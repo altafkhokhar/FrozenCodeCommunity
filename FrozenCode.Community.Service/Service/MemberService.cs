@@ -48,6 +48,7 @@ namespace FrozenCode.Community.Service
                 communityMember.CreatedBy = "System";
 
                 communityMember.MemberID = memberDto.MemberId;
+                communityMember.Address = memberDto.Address;
 
                 context.Members.Add(communityMember);
                 var result = context.SaveChanges();
@@ -84,7 +85,7 @@ namespace FrozenCode.Community.Service
             {
                 CommunityEntities context = new CommunityEntities();
 
-                members = context.Members.Select(sel => new MemberSearchDTO { Id = sel.Id, MemberId = sel.MemberID, FullName = sel.FullName, Mobile = sel.Mobile, FatherName = sel.FatherName   }).ToList();
+                members = context.Members.Select(sel => new MemberSearchDTO { Id = sel.Id, MemberId = sel.MemberID, FullName = sel.FullName, Mobile = sel.Mobile, FatherName = sel.FatherName, Address = sel.Address, ImageLocation = sel.ImageLocation }).ToList();
             }
             catch (Exception ex)
             {

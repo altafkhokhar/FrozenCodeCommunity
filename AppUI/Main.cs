@@ -55,5 +55,12 @@ namespace FrozenCode.Community.AppUI
         {
             lblBackgroundTitle.Visible = true;
         }
+
+        private void backUpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBackUp wndBackUp = new frmBackUp();
+            wndBackUp.MdiParent = this;
+            wndBackUp.Show();
+        }
     }
 }

@@ -20,6 +20,8 @@ namespace FrozenCode.Community.AppUI
             InitializeComponent();
 
             memberSrevice  = new MemberService();
+          
+            //HideErrorMessages();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -99,6 +101,32 @@ namespace FrozenCode.Community.AppUI
             return memberDto;
         }
 
+        private bool ValidatMemberEntry(MemberDTO memberDTO)
+        {
+            if (string.IsNullOrWhiteSpace(memberDTO.FullName))
+            {
+
+            }
+
+            return true;
+        
+        }
+
+        private void ValidateUI()
+        {
+            if (this.lblErrorFullName.Visible || this.lblErrorFatherName.Visible
+                 || this.lblErrorAddress.Visible || this.lblErrorMemberID.Visible
+                 || this.lblErrorMobile.Visible)
+            {
+                this.btnSave.Enabled = false;
+            }
+            else
+            {
+                this.btnSave.Enabled = true;
+            }            
+        }
+
+
 
         private void ClearMemberEntryData()
         {
@@ -122,6 +150,71 @@ namespace FrozenCode.Community.AppUI
 
         }
 
-        
+        private void maskedTextBoxMemberId_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(this.maskedTextBoxMemberId.Text.Trim()))
+            {
+                this.lblErrorMemberID.Visible = true;
+            }
+            else
+                this.lblErrorMemberID.Visible = false;
+
+            ValidateUI();
+        }
+
+        private void txtFullName_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(this.txtFullName.Text.Trim()))
+            {
+                this.lblErrorFullName.Visible = true;
+                this.txtFullName.Text = this.txtFullName.Text.Trim();
+            }
+            else
+                this.lblErrorFullName.Visible = false;
+
+            ValidateUI();
+        }
+
+        private void txtFatherName_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(this.txtFatherName.Text.Trim()))
+            {
+                this.lblErrorFatherName.Visible = true;
+                this.txtFatherName.Text = this.txtFatherName.Text.Trim();
+            }
+            else
+                this.lblErrorFatherName.Visible = false;
+
+            ValidateUI();
+        }
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(this.txtAddress.Text.Trim()))
+            {
+                this.lblErrorAddress.Visible = true;
+                this.txtAddress.Text = this.txtAddress.Text.Trim();
+            }
+            else
+                this.lblErrorAddress.Visible = false;
+            ValidateUI();
+        }
+
+        private void maskedTextBoxmobilenumber_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(this.maskedTextBoxmobilenumber.Text.Trim()))
+            {
+                this.lblErrorMobile.Visible = true;
+            }
+            else
+                this.lblErrorMobile.Visible = false;
+
+            ValidateUI();
+        }
+
+        private void MemberEntry_Load(object sender, EventArgs e)
+        {
+            ValidateUI();
+        }
     }
 }

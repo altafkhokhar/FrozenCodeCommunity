@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblErrorMemberID = new System.Windows.Forms.Label();
+            this.lblErrorMobile = new System.Windows.Forms.Label();
+            this.lblErrorAddress = new System.Windows.Forms.Label();
+            this.lblErrorFatherName = new System.Windows.Forms.Label();
+            this.lblErrorFullName = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.maskedTextBoxmobilenumber = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBoxMemberId = new System.Windows.Forms.MaskedTextBox();
@@ -60,6 +65,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.lblErrorMemberID);
+            this.panel1.Controls.Add(this.lblErrorMobile);
+            this.panel1.Controls.Add(this.lblErrorAddress);
+            this.panel1.Controls.Add(this.lblErrorFatherName);
+            this.panel1.Controls.Add(this.lblErrorFullName);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.maskedTextBoxmobilenumber);
             this.panel1.Controls.Add(this.maskedTextBoxMemberId);
@@ -83,14 +93,69 @@
             this.panel1.Controls.Add(this.txtFullName);
             this.panel1.Location = new System.Drawing.Point(115, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(729, 505);
+            this.panel1.Size = new System.Drawing.Size(729, 533);
             this.panel1.TabIndex = 9;
+            // 
+            // lblErrorMemberID
+            // 
+            this.lblErrorMemberID.AutoSize = true;
+            this.lblErrorMemberID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorMemberID.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorMemberID.Location = new System.Drawing.Point(150, 43);
+            this.lblErrorMemberID.Name = "lblErrorMemberID";
+            this.lblErrorMemberID.Size = new System.Drawing.Size(120, 13);
+            this.lblErrorMemberID.TabIndex = 42;
+            this.lblErrorMemberID.Text = "Please Enter MemberId!";
+            // 
+            // lblErrorMobile
+            // 
+            this.lblErrorMobile.AutoSize = true;
+            this.lblErrorMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorMobile.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorMobile.Location = new System.Drawing.Point(150, 239);
+            this.lblErrorMobile.Name = "lblErrorMobile";
+            this.lblErrorMobile.Size = new System.Drawing.Size(144, 13);
+            this.lblErrorMobile.TabIndex = 40;
+            this.lblErrorMobile.Text = "Please Enter Mobile Number!";
+            // 
+            // lblErrorAddress
+            // 
+            this.lblErrorAddress.AutoSize = true;
+            this.lblErrorAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorAddress.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorAddress.Location = new System.Drawing.Point(150, 196);
+            this.lblErrorAddress.Name = "lblErrorAddress";
+            this.lblErrorAddress.Size = new System.Drawing.Size(111, 13);
+            this.lblErrorAddress.TabIndex = 39;
+            this.lblErrorAddress.Text = "Please Enter Address!";
+            // 
+            // lblErrorFatherName
+            // 
+            this.lblErrorFatherName.AutoSize = true;
+            this.lblErrorFatherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorFatherName.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorFatherName.Location = new System.Drawing.Point(150, 146);
+            this.lblErrorFatherName.Name = "lblErrorFatherName";
+            this.lblErrorFatherName.Size = new System.Drawing.Size(134, 13);
+            this.lblErrorFatherName.TabIndex = 38;
+            this.lblErrorFatherName.Text = "Please Enter Father Name!";
+            // 
+            // lblErrorFullName
+            // 
+            this.lblErrorFullName.AutoSize = true;
+            this.lblErrorFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorFullName.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorFullName.Location = new System.Drawing.Point(150, 94);
+            this.lblErrorFullName.Name = "lblErrorFullName";
+            this.lblErrorFullName.Size = new System.Drawing.Size(120, 13);
+            this.lblErrorFullName.TabIndex = 37;
+            this.lblErrorFullName.Text = "Please Enter Full Name!";
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(455, 439);
+            this.btnClose.Location = new System.Drawing.Point(455, 451);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(89, 37);
             this.btnClose.TabIndex = 12;
@@ -107,6 +172,7 @@
             this.maskedTextBoxmobilenumber.Size = new System.Drawing.Size(93, 20);
             this.maskedTextBoxmobilenumber.TabIndex = 5;
             this.maskedTextBoxmobilenumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maskedTextBoxmobilenumber.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBoxmobilenumber_MaskInputRejected);
             // 
             // maskedTextBoxMemberId
             // 
@@ -117,9 +183,12 @@
             this.maskedTextBoxMemberId.Size = new System.Drawing.Size(37, 20);
             this.maskedTextBoxMemberId.TabIndex = 1;
             this.maskedTextBoxMemberId.ValidatingType = typeof(int);
+            this.maskedTextBoxMemberId.TextChanged += new System.EventHandler(this.maskedTextBoxMemberId_TextChanged);
             // 
             // pbMember
             // 
+            this.pbMember.BackColor = System.Drawing.Color.Transparent;
+            this.pbMember.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbMember.Location = new System.Drawing.Point(535, 24);
             this.pbMember.Name = "pbMember";
             this.pbMember.Size = new System.Drawing.Size(141, 169);
@@ -145,7 +214,7 @@
             // 
             this.btnClear.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(242, 439);
+            this.btnClear.Location = new System.Drawing.Point(242, 451);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(89, 37);
             this.btnClear.TabIndex = 11;
@@ -157,7 +226,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(59, 439);
+            this.btnSave.Location = new System.Drawing.Point(59, 451);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(82, 37);
             this.btnSave.TabIndex = 10;
@@ -179,7 +248,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(86, 365);
+            this.label7.Location = new System.Drawing.Point(86, 371);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 20);
             this.label7.TabIndex = 30;
@@ -189,7 +258,7 @@
             // 
             this.txtQualification.BackColor = System.Drawing.Color.Gainsboro;
             this.txtQualification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQualification.Location = new System.Drawing.Point(153, 365);
+            this.txtQualification.Location = new System.Drawing.Point(153, 371);
             this.txtQualification.Name = "txtQualification";
             this.txtQualification.Size = new System.Drawing.Size(292, 26);
             this.txtQualification.TabIndex = 8;
@@ -197,18 +266,19 @@
             // dtMaarriage
             // 
             this.dtMaarriage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtMaarriage.Location = new System.Drawing.Point(153, 315);
+            this.dtMaarriage.Location = new System.Drawing.Point(153, 321);
             this.dtMaarriage.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
             this.dtMaarriage.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dtMaarriage.Name = "dtMaarriage";
             this.dtMaarriage.Size = new System.Drawing.Size(320, 26);
             this.dtMaarriage.TabIndex = 7;
+            this.dtMaarriage.Value = new System.DateTime(1994, 1, 1, 0, 0, 0, 0);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(67, 315);
+            this.label6.Location = new System.Drawing.Point(67, 321);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 20);
             this.label6.TabIndex = 27;
@@ -225,6 +295,7 @@
             this.dtDOB.Name = "dtDOB";
             this.dtDOB.Size = new System.Drawing.Size(320, 26);
             this.dtDOB.TabIndex = 6;
+            this.dtDOB.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             // 
             // label5
             // 
@@ -264,6 +335,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(292, 26);
             this.txtAddress.TabIndex = 4;
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
             // label2
             // 
@@ -283,6 +355,7 @@
             this.txtFatherName.Name = "txtFatherName";
             this.txtFatherName.Size = new System.Drawing.Size(292, 26);
             this.txtFatherName.TabIndex = 3;
+            this.txtFatherName.TextChanged += new System.EventHandler(this.txtFatherName_TextChanged);
             // 
             // label1
             // 
@@ -302,6 +375,7 @@
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(292, 26);
             this.txtFullName.TabIndex = 2;
+            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
             // 
             // panel2
             // 
@@ -340,6 +414,7 @@
             this.TransparencyKey = System.Drawing.Color.Gray;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MemberEntry_FormClosing);
+            this.Load += new System.EventHandler(this.MemberEntry_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMember)).EndInit();
@@ -375,5 +450,10 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxmobilenumber;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxMemberId;
+        private System.Windows.Forms.Label lblErrorFullName;
+        private System.Windows.Forms.Label lblErrorFatherName;
+        private System.Windows.Forms.Label lblErrorAddress;
+        private System.Windows.Forms.Label lblErrorMobile;
+        private System.Windows.Forms.Label lblErrorMemberID;
     }
 }

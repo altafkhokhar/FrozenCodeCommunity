@@ -145,6 +145,7 @@
             this.Name = "frmMemberList";
             this.Text = "Members";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMemberList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgMembers)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

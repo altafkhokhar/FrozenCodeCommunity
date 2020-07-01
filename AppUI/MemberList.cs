@@ -73,5 +73,10 @@ namespace FrozenCode.Community.AppUI
                 btnSearch.Enabled = true;
             }
         }
+
+        private void frmMemberList_Load(object sender, EventArgs e)
+        {
+            this.dgMembers.ReadOnly = true;
+        }
     }
 }
