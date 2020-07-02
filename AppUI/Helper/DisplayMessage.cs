@@ -6,6 +6,7 @@ namespace FrozenCode.Community.AppUI.Helper
 {
     public class DisplayMessage
     {
+        public const string DONE_TITLE = "DONE";
         public const string SAVE_TITLE = "SAVED";
         public const string ERROR_TITLE = "ERROR";
         public const string INFO_TITLE = "INFOS";

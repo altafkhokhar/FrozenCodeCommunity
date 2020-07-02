@@ -28,54 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBackUp));
             this.lblBackUpFolderPath = new System.Windows.Forms.Label();
             this.fbdBackup = new System.Windows.Forms.FolderBrowserDialog();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtBackupPath = new System.Windows.Forms.TextBox();
+            this.lblPath = new System.Windows.Forms.Label();
+            this.btnBackup = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnBrowseBackUpFolder = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblBackUpFolderPath
             // 
-            this.lblBackUpFolderPath.AutoSize = true;
-            this.lblBackUpFolderPath.Location = new System.Drawing.Point(40, 50);
+            resources.ApplyResources(this.lblBackUpFolderPath, "lblBackUpFolderPath");
             this.lblBackUpFolderPath.Name = "lblBackUpFolderPath";
-            this.lblBackUpFolderPath.Size = new System.Drawing.Size(104, 13);
-            this.lblBackUpFolderPath.TabIndex = 0;
-            this.lblBackUpFolderPath.Text = "Select BackUp Path";
+            // 
+            // fbdBackup
+            // 
+            this.fbdBackup.HelpRequest += new System.EventHandler(this.fbdBackup_HelpRequest);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.txtBackupPath);
+            this.panel1.Controls.Add(this.lblPath);
+            this.panel1.Controls.Add(this.btnBackup);
+            this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.btnBrowseBackUpFolder);
             this.panel1.Controls.Add(this.lblBackUpFolderPath);
-            this.panel1.Location = new System.Drawing.Point(67, 43);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(459, 137);
-            this.panel1.TabIndex = 1;
+            // 
+            // txtBackupPath
+            // 
+            this.txtBackupPath.BackColor = System.Drawing.Color.Gainsboro;
+            resources.ApplyResources(this.txtBackupPath, "txtBackupPath");
+            this.txtBackupPath.Name = "txtBackupPath";
+            // 
+            // lblPath
+            // 
+            resources.ApplyResources(this.lblPath, "lblPath");
+            this.lblPath.Name = "lblPath";
+            // 
+            // btnBackup
+            // 
+            this.btnBackup.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            resources.ApplyResources(this.btnBackup, "btnBackup");
+            this.btnBackup.Name = "btnBackup";
+            this.btnBackup.UseVisualStyleBackColor = false;
+            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            resources.ApplyResources(this.btnClear, "btnClear");
+            this.btnClear.Name = "btnClear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnBrowseBackUpFolder
             // 
-            this.btnBrowseBackUpFolder.Location = new System.Drawing.Point(265, 50);
+            this.btnBrowseBackUpFolder.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            resources.ApplyResources(this.btnBrowseBackUpFolder, "btnBrowseBackUpFolder");
             this.btnBrowseBackUpFolder.Name = "btnBrowseBackUpFolder";
-            this.btnBrowseBackUpFolder.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowseBackUpFolder.TabIndex = 1;
-            this.btnBrowseBackUpFolder.Text = "Browser";
-            this.btnBrowseBackUpFolder.UseVisualStyleBackColor = true;
+            this.btnBrowseBackUpFolder.UseVisualStyleBackColor = false;
             this.btnBrowseBackUpFolder.Click += new System.EventHandler(this.btnBrowseBackUpFolder_Click);
             // 
             // frmBackUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(581, 281);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmBackUp";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "BACKUP";
+            this.Load += new System.EventHandler(this.frmBackUp_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -88,5 +121,9 @@
         private System.Windows.Forms.FolderBrowserDialog fbdBackup;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnBrowseBackUpFolder;
+        private System.Windows.Forms.Button btnBackup;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label lblPath;
+        private System.Windows.Forms.TextBox txtBackupPath;
     }
 }
